@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+body {
+    overflow: hidden;
+}
+
 .head {
     background-color: rgb(150, 201, 252);
     padding: 2px;
@@ -75,8 +79,9 @@
 
 .input-div {
     width: 100%;
-    position: relative;
-    top: 90%;
+    margin-top: 3px;
+    /* position: relative;
+    top: 90%; */
     /* padding: 0px 20px; */
 }
 
@@ -96,4 +101,32 @@
     background-color: dodgerblue;
     outline: none;
     border: 1px solid rgb(150, 201, 252);
+}
+
+#message {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 90%;
+    /* padding: */
+    overflow-y: scroll;
+}
+
+#message > span {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+#message > span > span {
+    background-color: dodgerblue;
+    border-radius: 50%;
+    padding: 1px 5px;
+    color: white;
+    margin-right: 8px;
+}
+
+#message > span > h6 {
+    margin-top: 7px;
 }
