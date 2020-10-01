@@ -4,153 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Chat app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyDKG_GhRF2SiZOelFe3zDgrt9O9wNd0rvQ",
+          authDomain: "farrukh-3d492.firebaseapp.com",
+          databaseURL: "https://farrukh-3d492.firebaseio.com",
+          projectId: "farrukh-3d492",
+          storageBucket: "farrukh-3d492.appspot.com",
+          messagingSenderId: "29560340418",
+          appId: "1:29560340418:web:713349fb365741d7e7e05b",
+          measurementId: "G-0X2TC34V89"
+        };
+        // Initialize Fir<h1>Pakistan</h1>ebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <header class="head">
-        <h5></h5>My chat app</h5>
-        <h6 class="logout">logout</h6>
-    </header>
+<body id="front-body">
 
-    <section class="main-section">
-        <div class="contact">
-            <input type="text" placeholder="Search" class="search-bar">
+    <section class="f-center">
+        <strong><h2>Register Here</h2></strong>
+        <form class="f-form" onsubmit="joinin(event, 0)">
+            <input type="email" id="email" placeholder="Enter your email" ><br>
+            <input type="password" id="password" placeholder="Enter your password"><br>
+            <input type="submit" value="Join" class="btn btn-success">
+            <p id="f-error" style="color: red"></p>
+        </form>
 
-            <div class="contact-list">
-                <span>A</span>
-                <h6>farrukh</h6>
-            </div>
+        <h5>or</h5>
 
-            <div class="contact-list">
-                <span>A</span>
-                <h6>farrukh</h6>
-            </div>
-
-            <div class="contact-list">
-                <span>A</span>
-                <h6>farrukh</h6>
-            </div>
-
-            <div class="contact-list">
-                <span>A</span>
-                <h6>farrukh</h6>
-            </div>
-        </div>
-
-        <div class="chat-div">
-            <div id="message">
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-
-                <span>
-                    <span>F</span>
-                    <h6>Pakistan zindabad</h6>
-                </span>
-            </div>
-
-            <div class="input-div">
-                <input type="text" id="inp-text">
-                <input type="submit" value="Send" id="inp-btn">
-            </div>
-
-        </div>
+        <button class="btn btn-primary f-fb" onclick="joinin(1)">Sign in with Facebook</button>
     </section>
 
 
     <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

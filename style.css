@@ -9,7 +9,8 @@ body {
 
 .head {
     background-color: rgb(150, 201, 252);
-    padding: 2px;
+    padding: 4px;
+    font-size: 3vw;
 }
 
 .head > h5 {
@@ -18,9 +19,10 @@ body {
 }
 
 .logout {
-    margin-top: 3px;
+    margin-top: 5px;
     padding-right: 5px;
     float: right;
+    cursor: pointer;
 }
 
 .main-section {
@@ -31,55 +33,62 @@ body {
 .contact {
     /* display: inline; */
     background-color: aliceblue;
-    width: 30%;
+    width: 40%;
     height: 99%;
     border-right: 2px solid rgb(187, 223, 255);
-    padding: 5px;
+    padding: 20px;
     overflow: hidden;
 }
 
 .search-bar {
-    width: 98%;
-    height: 20px;
-    margin: 10px auto;
+    width: 100%;
+    height: 40px;
+    margin: 20px auto;
     outline: none;
-    border-radius: 10px;
-    text-indent: 5px;
-    border: 1px solid rgb(150, 201, 252);
+    border-radius: 50px;
+    text-indent: 15px;
+    border: 2px solid rgb(150, 201, 252);
+    font-size: 1.5vw;
 }
 
 .contact-list {
-    margin: 5px auto;
+    width: 98%;
+    height: 35px;
+    margin: 10px auto;
     background-color: rgb(187, 223, 255);
     /* border: 5px solid rgb(187, 223, 255); */
-    border-radius: 5px;
+    border-radius: 50px;
     padding: 5px;
     display: flex;
+    cursor: pointer;
+
 }
 
 .contact-list > span {
     background-color: dodgerblue;
     border-radius: 50%;
-    padding: 1px 5px;
+    padding: 5px 10px;
     color: white;
     margin-right: 8px;
+    font-size: 1.5vw;
 }
 
 .contact-list > h6 {
-    margin-top: 6px;
+    margin-top: 5px;
+    font-size: 1.5vw;
 }
 
 
 .chat-div {
     width: 100%;
-    height: 103%;
-    background-color: rgba(156, 199, 228, 0.685);
+    height: 94vh;
+    background-color: rgb(187, 223, 255);
     /* display: inline; */
 }
 
 .input-div {
     width: 100%;
-    margin-top: 3px;
+    margin: 8px 30px;
     /* position: relative;
     top: 90%; */
     /* padding: 0px 20px; */
@@ -87,20 +96,26 @@ body {
 
 #inp-text{
     width:80%;
-    height: 18px;
-    border-radius: 10px;
+    height: 42px;
+    border-radius: 30px;
     outline: none;
     border: 2px solid rgb(150, 201, 252);
-    text-indent: 6px;
+    text-indent: 20px;
     margin-left: 10px;
+    font-size: 1.5vw;
 }
 
 #inp-btn {
+    margin-left: 10px;
+    width: 70px;
+    height: 42px;
     padding: 2px 8px;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: dodgerblue;
     outline: none;
     border: 1px solid rgb(150, 201, 252);
+    font-size: 1.5vw;
+    color: white;
 }
 
 #message {
@@ -113,20 +128,76 @@ body {
 
 #message > span {
     display: flex;
-    margin-left: 15px;
-    margin-top: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
     margin-bottom: 5px;
 
 }
 
 #message > span > span {
+    height: 40px;
+    width: 30px;
     background-color: dodgerblue;
     border-radius: 50%;
-    padding: 1px 5px;
+    padding: 5px 10px;
     color: white;
     margin-right: 8px;
+    font-size: 2.5vw;
+    text-align: center;
 }
 
 #message > span > h6 {
-    margin-top: 7px;
+    /* margin-top: 7px; */
+    font-size: 1.5vw;
+    background-color: rgba(184, 219, 235, 0.836); 
+    padding: 10px 10px;
+    border-radius: 20px;
+    max-width: 600px;
+}
+
+/*------------------------- Front page ------------------------*/
+
+#front-body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,81,121,1) 0%, rgba(0,212,255,1) 88%);
+}
+
+.f-center {
+    background: rgb(210,210,210);
+    background: linear-gradient(90deg, rgba(210,210,210,1) 9%, rgba(255,255,255,1) 53%, rgba(210,210,210,1) 95%);
+    margin: 70px auto;
+    width: 35%;
+    /* height: 50%; */
+    /* border: 2px solid #fffdfd; */
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 0px;
+
+}
+
+.f-form {
+    margin-top: 25px;
+}
+
+.f-form > input{
+    margin: 10px;
+    width: 60%;
+    height: 35px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.f-error {
+    margin: 10px 50px;
+}
+
+.f-fb {
+    width: 60%;
+    height: 35px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
 }

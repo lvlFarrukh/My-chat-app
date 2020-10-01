@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chat app</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+          apiKey: "AIzaSyDKG_GhRF2SiZOelFe3zDgrt9O9wNd0rvQ",
+          authDomain: "farrukh-3d492.firebaseapp.com",
+          databaseURL: "https://farrukh-3d492.firebaseio.com",
+          projectId: "farrukh-3d492",
+          storageBucket: "farrukh-3d492.appspot.com",
+          messagingSenderId: "29560340418",
+          appId: "1:29560340418:web:713349fb365741d7e7e05b",
+          measurementId: "G-0X2TC34V89"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadChatapp()"> 
+    <div style="height: 100vh; background-color: black;">    
+        <header class="head">
+            <h5></h5>My chat app</h5>
+            <h6 class="logout" onclick='logout()'>logout</h6>
+        </header>
+
+        <section class="main-section">
+            <div class="contact" id="h-contact">
+                <input type="text" placeholder="Search" class="search-bar">
+                
+            </div>
+
+            <div class="chat-div">
+                
+                <div id="message">
+                    <span>
+                        <span>F</span>
+                        <h6>Pakistan zindabad</h6>
+                    </span>
+                </div>
+
+                <div class="input-div">
+                    <input type="text" id="inp-text">
+                    <input type="submit" value="Send" id="inp-btn">
+                </div>
+
+            </div>
+</section>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
